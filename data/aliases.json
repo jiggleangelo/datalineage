@@ -1,0 +1,4 @@
+{
+  "Common Crawl": {"id": "ext:common-crawl", "title": "Common Crawl", "url": "https://commoncrawl.org/", "licence": "unknown"},
+  "The Pile": {"id": "ext:the-pile", "title": "The Pile", "url": null, "licence": "unknown"}
+}

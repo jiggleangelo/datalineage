@@ -1,0 +1,5 @@
+[
+  {"id":"testorg/mix-a","flags":["NC_UPSTREAM","DECLARED_MORE_PERMISSIVE_THAN_UPSTREAM"]},
+  {"id":"testorg/clean","flags":[]},
+  {"id":"testorg/image","flags":["NON_TEXT_NOT_ANALYSED"]}
+]

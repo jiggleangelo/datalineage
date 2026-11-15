@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>DataLineage</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<main>
+  <h1>What's really upstream of your training data?</h1>
+  <form id="check">
+    <input id="dataset" required placeholder="testorg/mix-a" aria-label="Dataset ID">
+    <button>Check</button>
+  </form>
+  <p>Single-dataset checks trace up to two upstream levels. In default demo mode, try testorg/mix-a.</p>
+  <details>
+    <summary>Upload or paste a manifest</summary>
+    <p>Up to 50 dataset IDs, traced to depth four, subject to configured limits.</p>
+    <label for="manifest-file">Manifest file (JSON or plain text)</label>
+    <input id="manifest-file" type="file" accept=".json,.txt,application/json,text/plain">
+    <textarea id="manifest" rows="8" aria-label="Manifest" placeholder="One dataset ID per line, or JSON manifest"></textarea>
+    <button id="report" type="button">Build report</button>
+  </details>
+  <p id="status" role="status" aria-live="polite"></p>
+  <section id="result" hidden>
+    <div class="summary">
+      <div><small>Declared licence</small><strong id="declared"></strong></div>
+      <div><small>Detected licence</small><strong id="detected"></strong></div>
+      <b id="coverage"></b>
+    </div>
+    <p id="limits"></p>
+    <h2>Flags</h2><ul id="flags"></ul>
+    <h2>Upstream tree</h2><ul id="tree"></ul>
+    <nav id="exports" aria-label="Report and template exports"></nav>
+  </section>
+  <section>
+    <h2>Keep me informed</h2>
+    <form id="signup">
+      <input id="email" type="email" required placeholder="work@example.com" aria-label="Email">
+      <label for="provider">Are you an AI Act provider?</label>
+      <select id="provider">
+        <option value="yes">Yes</option>
+        <option value="no">No</option>
+        <option value="unsure">Unsure</option>
+        <option value="request">Answering a customer or regulator request</option>
+      </select>
+      <button>Sign up</button>
+    </form>
+    <label for="pilot-contact">Optional pilot contact</label>
+    <input id="pilot-contact" maxlength="500" placeholder="How can we reach you?">
+    <button id="pilot" type="button">Draft my training-data provenance report, $149</button>
+    <p>This records interest only; no payment is taken.</p>
+  </section>
+</main>
+<footer>Automated provenance draft. Not legal advice and not a compliance certification. Based only on public dataset cards and abstracts available at generation time; upstream sources may be incomplete or wrong. Review with qualified counsel before relying on it.</footer>
+<script src="/static/app.js"></script>
+</body>
+</html>

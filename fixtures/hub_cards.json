@@ -1,0 +1,6 @@
+{
+  "testorg/mix-a": {"id":"testorg/mix-a","card_text":"---\nlicense: apache-2.0\nsource_datasets:\n - testorg/source-b\n---\nIncludes Common Crawl material.","card_data":{"license":"apache-2.0","source_datasets":["testorg/source-b"]},"tags":["modality:text"]},
+  "testorg/source-b": {"id":"testorg/source-b","card_text":"---\nlicense: cc-by-nc-4.0\n---\nCC-BY-NC-4.0","card_data":{"license":"cc-by-nc-4.0"},"tags":["modality:text"]},
+  "testorg/clean": {"id":"testorg/clean","card_text":"---\nlicense: mit\n---\nMIT","card_data":{"license":"mit"},"tags":["modality:text"]},
+  "testorg/image": {"id":"testorg/image","card_text":"---\nlicense: apache-2.0\nsource_datasets:\n - testorg/source-b\n---","card_data":{"license":"apache-2.0","source_datasets":["testorg/source-b"]},"tags":["modality:image"]}
+}
